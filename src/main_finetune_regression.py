@@ -11,7 +11,7 @@ from .external.ase_dataset_attribute import AseReadDatasetAttr
 from .trainer_finetune_regression import TrainerFineTuneRegression
 
 import sys
-sys.path.append('/crystal-transformer')
+sys.path.append('/CrystalGenerativeModels')
 from equiformer_v2.nets import EquiformerV2
 
 
