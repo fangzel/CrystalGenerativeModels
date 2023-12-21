@@ -11,7 +11,7 @@ from .external.ase_dataset import AseReadDataset
 from .trainer_pretrain import TrainerPreTrain
 
 import sys
-sys.path.append('/crystal-transformer')
+sys.path.append('/CrystalGenerativeModels')
 from equiformer_v2.nets import EquiformerV2
 
 
