@@ -12,7 +12,7 @@ from .external.ase_dataset_attribute import AseReadDatasetAttr
 from .external.ase_dataset import AseReadDataset
 
 import sys
-sys.path.append('/crystal-transformer')
+sys.path.append('/CrystalGenerativeModels')
 from equiformer_v2.nets import EquiformerV2
 
 def main(data_path, discriminator_label_path, checkpoint_path, modelsave_path, n_epochs):
