@@ -5,10 +5,9 @@ matplotlib==3.7.2
 numba==0.57.1
 numpy==1.25.1
 ocp-models==0.0.3
-orjson==3.9.2
-pymatgen==2023.7.14
+orjson==3.9.5
+pymatgen==2023.8.10
 pytest==7.4.0
-PyYAML==6.0
 PyYAML==6.0.1
 ray==2.5.1
 Requests==2.31.0
@@ -25,3 +24,4 @@ torch_scatter==2.1.1+pt20cu117
 torch_sparse==0.6.17+pt20cu117
 tqdm==4.65.0
 wandb==0.15.5
+tensorboard==2.14.0
