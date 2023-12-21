@@ -44,6 +44,18 @@ In [src/external](src/external):
 	<img src="plots/pretrain_procedure.png" alt="photo not available" width="98%" height="98%">
 </p>
 
+Pre-training parameters:
+
+* `--weight_loss_pos`: weight of the loss related to positions (while the weigt of atomic number is set to 1).
+* `--data_path`: path to load dataset, with each sample saved in seperate CIF files.
+* `--checkpoint_path`: path to checkpoint for loading model.
+* `--modelsave_path`: path for saving the trained model.
+* `--n_epochs`: number of training epochs.
+
+Script example for running [main_pretrain.py](src/main_pretrain.py):
+```sh
+python src/main_pretrain.py --weight_loss_pos <float> --data_path <str> --checkpoint_path <str> --modelsave_path <str> --n_epochs <int>
+```
 
 ## Fine-Tuning:
 
@@ -51,13 +63,43 @@ In [src/external](src/external):
 	<img src="plots/finetune_procedure.png" alt="photo not available" width="98%" height="98%">
 </p>
 
+Fine-Tuning parameters:
+
+* `--data_path`: path to load dataset of input crystal structures, with each sample saved in seperate CIF files.
+* `--attr_path`: path to load labels (outputs) corresponding to each input crystal structure, with each sample saved in seperate Pickle files.
+* `--output_attr`: a string named the target quantity for prediction.
+* `--attr_func`: a string named the function applied to the output quantity, e.g., 'log'.
+* `--output_block_channels`: the dimension of the output.
+* `--checkpoint_path`: path to checkpoint for loading model.
+* `--modelsave_path`: path for saving the trained model.
+* `--n_epochs`: number of training epochs.
+
+Script example for running [main_finetune_regression.py](src/main_finetune_regression.py) and [main_finetune_classification.py](src/main_finetune_classification.py):
+```sh
+python src/main_finetune_regression.py --data_path <str> --attr_path <str> --output_attr <str> --attr_func <str> --output_block_channels <int> --checkpoint_path <str> --modelsave_path <str> --n_epochs <int>
+```
+```sh
+python src/main_finetune_classification.py --data_path <str> --attr_path <str> --output_attr <str> --attr_func <str> --output_block_channels <int> --checkpoint_path <str> --modelsave_path <str> --n_epochs <int>
+```
+
 ## GAN
 
 <p align="center">
 	<img src="plots/gan_procedure.png" alt="photo not available" width="70%" height="70%">
 </p>
 
+GAN parameters:
 
+* `--data_path`: path to load dataset of input crystal structures, with each sample saved in seperate CIF files.
+* `--discriminator_label_path`: path to load stability of each original crystal structure (which is not necessary if all input structures are stable.)
+* `--checkpoint_path`: path to checkpoint for loading model.
+* `--modelsave_path`: path for saving the trained model.
+* `--n_epochs`: number of training epochs.
+
+Script example for running [main_gan_lit.py](src/main_gan_lit.py):
+```sh
+python src/main_gan_lit.py --data_path <str> --discriminator_label_path <str> --checkpoint_path <str> --modelsave_path <str> --n_epochs <int>
+```
 
 
 
