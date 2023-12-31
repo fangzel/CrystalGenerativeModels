@@ -7,11 +7,8 @@ from sklearn.model_selection import train_test_split
 from torch_geometric.loader import DataLoader
 import socket
 
-from .external.ase_dataset import AseReadDataset
-from .trainer_pretrain import TrainerPreTrain
-
-import sys
-sys.path.append('/CrystalGenerativeModels')
+from src import AseReadDataset
+from src import TrainerPreTrain
 from equiformer_v2.nets import EquiformerV2
 
 
