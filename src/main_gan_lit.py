@@ -7,12 +7,9 @@ from torch_geometric.loader import DataLoader
 import lightning as L
 from lightning.pytorch.callbacks import ModelCheckpoint
 
-from .trainer_gan_lit import TrainerGANLit
-from .external.ase_dataset_attribute import AseReadDatasetAttr
-from .external.ase_dataset import AseReadDataset
-
-import sys
-sys.path.append('/CrystalGenerativeModels')
+from src import TrainerGANLit
+from src import AseReadDatasetAttr
+from src import AseReadDataset
 from equiformer_v2.nets import EquiformerV2
 
 def main(data_path, discriminator_label_path, checkpoint_path, modelsave_path, n_epochs):
@@ -132,7 +129,7 @@ def main(data_path, discriminator_label_path, checkpoint_path, modelsave_path, n
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_path", type=str, default=None, help="Path to load training and validation set.")
+    parser.add_argument("--data_path", type=str, required=True, help="Path to load training and validation set.")
     parser.add_argument("--discriminator_label_path", type=str, default=None, help="Path to load stability of each original crystal structure.")
     parser.add_argument("--checkpoint_path", type=str, default=None, help="Path to checkpoint for loading GAN.")
     parser.add_argument("--modelsave_path", type=str, required=True, help="Path to save GAN.")
