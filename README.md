@@ -10,6 +10,9 @@ This is the code repository for the paper [Self-Supervised Generative Models for
 1. Environment Setup: see [requirements.txt](requirements.txt).
 
 2. Clone this repo.
+   ```sh
+   git clone https://github.com/fangzel/CrystalGenerativeModels.git
+   ```
 
 3. Clone our modified version of 'equiformer_v2' and put it into our root folder.
    ```sh
