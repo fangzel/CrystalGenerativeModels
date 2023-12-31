@@ -2,6 +2,10 @@
 
 This is the code repository for the paper [Self-Supervised Generative Models for Crystal Structures](https://arxiv.org/abs/2312.14485).
 
+<p align="center">
+	<img src="plots/results.jpg" alt="photo not available" width="98%" height="98%">
+</p>
+
 ## Getting Started
 1. Environment Setup: see [requirements.txt](requirements.txt).
 
