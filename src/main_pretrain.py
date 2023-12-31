@@ -89,7 +89,7 @@ def main(weight_loss_pos, data_path, checkpoint_path, modelsave_path, n_epochs):
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--weight_loss_pos", type=float, required=True, help="Weight of loss_pos (while weight of loss_atom is set to 1).")
-    parser.add_argument("--data_path", type=str, default=None, help="Path to load training and validation set.")
+    parser.add_argument("--data_path", type=str, required=True, help="Path to load training and validation set.")
     parser.add_argument("--checkpoint_path", type=str, default=None, help="Path to checkpoint for loading model.")
     parser.add_argument("--modelsave_path", type=str, required=True, help="Path for saving model.")
     parser.add_argument("--n_epochs", type=int, default=10, help="Number of training epochs.")
