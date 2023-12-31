@@ -25,3 +25,6 @@ torch_sparse==0.6.17+pt20cu117
 tqdm==4.65.0
 wandb==0.15.5
 tensorboard==2.14.0
+lightning==2.1.2
+lightning-utilities==0.10.0
+pytorch-lightning==2.1.2
