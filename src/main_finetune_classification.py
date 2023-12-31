@@ -7,11 +7,8 @@ from sklearn.model_selection import train_test_split
 from torch_geometric.loader import DataLoader
 import socket
 
-from .external.ase_dataset_attribute import AseReadDatasetAttr
-from .trainer_finetune_classification import TrainerFineTuneClassification
-
-import sys
-sys.path.append('/CrystalGenerativeModels')
+from src import AseReadDatasetAttr
+from src import TrainerFineTuneClassification
 from equiformer_v2.nets import EquiformerV2
 
 def find_free_port():
@@ -114,8 +111,7 @@ def worker(rank, world_size,
 
     cleanup()
 
-def main(world_size, 
-        data_path, attr_path, 
+def main(data_path, attr_path, 
         output_attr, attr_func, output_block_channels,
         checkpoint_path, modelsave_path, n_epochs):
 
