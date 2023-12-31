@@ -61,7 +61,7 @@ python src/main_pretrain.py --weight_loss_pos <float> --data_path <str> --checkp
 ## Fine-Tuning:
 
 <p align="center">
-	<img src="plots/finetune_procedure.png" alt="photo not available" width="98%" height="98%">
+	<img src="plots/finetune_procedure.png" alt="photo not available" width="80%" height="80%">
 </p>
 
 Fine-Tuning parameters:
