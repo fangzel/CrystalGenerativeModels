@@ -160,7 +160,7 @@ class AseAtomsDatasetAttr(Dataset, ABC):
 
 
 @registry.register_dataset("ase_read")
-class AseReadDataset(AseAtomsDataset):
+class AseReadDatasetAttr(AseAtomsDatasetAttr):
     """
     This Dataset uses ase.io.read to load data from a directory on disk.
     This is intended for small-scale testing and demonstrations of OCP.
